@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
+    <meta name="author" content="Webpixels">
+    <title>灿智广告</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link type="text/css" href="./assets/css/theme.css" rel="stylesheet">
+    <!-- Demo CSS - No need to use these in your project -->
+    <link type="text/css" href="./assets/css/demo.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+        <button class="navbar-toggler" type="button" data-action="offcanvas-open" data-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse offcanvas-collapse" id="navbar_main">
+          <ul class="navbar-nav ml-auto align-items-lg-center">
+            <h6 class="dropdown-header font-weight-600 d-lg-none px-0">Menu</h6>
+          
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: 16px; color:antiquewhite" id = "zuopin" href="./works.html">作品</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: 16px; color:antiquewhite" id="guanyu" href="./about.html">关于我们</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: 16px; color:antiquewhite" id="jiaru" href="./join.html">加入我们</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: 16px; color:antiquewhite">中文 | English</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <main class="main">
+      <section class="spotlight parallax bg-cover bg-size--cover" data-spotlight="fullscreen" style="background-image: url('assets/images/backgrounds/01.png');background-size:100% 100%;">
+        <div class="spotlight-holder py-lg pt-lg-xl">
+        </div>
+      </section>
+      <div id="works"></div>
+      <div class="modal fade bs-example-modal-lg text-center" id="imgModal" tabindex="-1" role="dialog" data-toggle="modal" aria-labelledby="myLargeModalLabel" aria-hidden="true"><div class="modal-dialog modal-lg" style="display:inline-block;width:auto;"><div class="modal-content"><div id="imgshow"></div></div></div></div>
+
+    </main>
+    <!-- Core -->
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.js"></script>
+
+    <script>
+
+      $('#zuopin').click(function(){
+
+      $('html,body').animate({scrollTop:$('#works').offset().top},800);
+      });
+
+      $('#guanyu').click(function(){
+
+      $('html,body').animate({scrollTop:$('#about').offset().top},800);
+      });
+
+      $('#jiaru').click(function(){
+
+      $('html,body').animate({scrollTop:$('#join').offset().top},800);
+      });
+
+      function send() {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var detail = $("#detail").val();
+        if (email == '' || email == undefined) {
+          alert("邮箱地址不能为空")
+          return
+        }
+        var text = "姓名：" + name + ";电话：" + phone + ";需求："+detail;
+        Email.send({
+            SecureToken : "e083bb75-2847-45d5-ae61-8ef3004625d8",
+            To : email,
+            From : "daiwenlong0208@gmail.com",
+            Subject : "灿智客户",
+            Body : text
+        }).then(
+          message => alert(message)
+        );
+      }
+
+      function showMaxImg(obj){var src=$(obj).attr("src");$("#imgModal").find("#imgshow").html("<img src='"+src+"' class='carousel-inner img-responsive img-rounded' data-dismiss='modal'>");
+$("#imgModal").modal('show');
+}
+    </script>
+  </body>
+</html>
