@@ -12,6 +12,20 @@
     <link type="text/css" href="./assets/css/theme.css" rel="stylesheet">
     <!-- Demo CSS - No need to use these in your project -->
     <link type="text/css" href="./assets/css/demo.css" rel="stylesheet">
+    <style>
+     ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+color: rgb(251, 248, 248)!important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: rgb(251, 248, 248)!important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: rgb(251, 248, 248)!important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: rgb(251, 248, 248)!important;
+}
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark">
@@ -27,7 +41,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" style="font-size: 16px; color:antiquewhite" id="guanyu">关于我们</a>
+              <a class="nav-link active" style="font-size: 16px; color:antiquewhite" id="guanyu">关于我们</a>
             </li>
 
             <li class="nav-item">
@@ -47,15 +61,15 @@
         <div class="row cols-xs-space cols-sm-space cols-md-space"  data-spotlight="fullscreen">
           <div class="col-lg-6" >
             <div style="margin-left: 5%;margin-top: 2%;"><img class="img-responsive" style="width:30%;height:30%;" src="./assets/images/logo.png" ></div>
-            <div class="container text-center" style="margin-top: 60px;">
+            <div class="container text-center" style="margin-top: 15%;">
               <div class="row cols-xs-space cols-sm-space cols-md-space">
                 <div class="col-12">
-                  <h2 class="heading h1 strong-600">
+                  <h2 class="heading h1 strong-600" style="font-family:思源黑体;font-size: 40px;font-weight: 700;">
                     About Us
                   </h2>
                   <div class="row justify-content-center mt-4">
                     <div class="col-lg-9">
-                      <p class="lead">
+                      <p class="lead" style="font-family:思源黑体;font-size: 18px;font-weight: 400;">
                         灿智广告是一家由资深4A创意人建立的本土广告公司</br>
                         提供品牌设计解决方案、品牌推广策划的专业综合类广告公司</br>
                         长期深耕于餐饮领域，是行业领军品牌的长期合作伙伴
@@ -65,7 +79,7 @@
                       </div>                      
                     </div>
                   </div>
-                  <h2 class="heading h1 strong-600">
+                  <h2 class="heading h1 strong-600" style="font-family:思源黑体;font-size: 40px;font-weight: 700;">
                     Clients
                   </h2>
                   <div class="row justify-content-center mt-4">
@@ -79,7 +93,7 @@
             </div>
           </div>
           <div class="col-lg-6" style="background-color: #E5004A;">
-            <div class="container text-center" style="margin-top: 60px;">
+            <div class="container text-center" style="margin-top: 20%;">
               <div class="row cols-xs-space cols-sm-space cols-md-space">
                 <div class="col-12">
                   <h2 class="heading text-white h1 strong-600">
@@ -89,24 +103,26 @@
                     <div class="col-lg-8">
                       <p class="lead text-white">
                         地址 : 上海市静安区西康路928号创展大厦907室<br/>
-                        电话 : XXXXX
+                        电话 : 13482877545
                       </p>
                       <div class="btn-container mt-5">                         
                           <div class="form-group">
-                            <input type="text" class="form-control" placeholder="请输入你的姓名" id="name">
+                            <input type="text" class="form-control" placeholder="请输入你的姓名" id="name"  style="background-color: #E5004A;border:.0625rem solid #f5f9fc">
                           </div>                                                   
                           <div class="form-group">
-                            <input type="text" class="form-control is-valid" placeholder="请输入你的邮箱" id="email">
+                            <input type="text" class="form-control" placeholder="请输入你的邮箱" id="email" style="background-color: #E5004A;border:.0625rem solid #f5f9fc">
                           </div>                      
                       
                           <div class="form-group">
-                            <input type="text" class="form-control is-invalid" placeholder="请输入你的联系方式（微信、电话等）" id="phone">
+                            <input type="text" class="form-control" placeholder="请输入你的联系方式（微信、电话等）" id="phone" style="background-color: #E5004A;border:.0625rem solid #f5f9fc">
                           </div>
 
                           <div class="form-group">
-                            <textarea class="form-control" placeholder="请输入你的需求（创意设计、拍摄等）" id="detail"></textarea>
+                            <textarea class="form-control" placeholder="请输入你的需求（创意设计、拍摄等）" id="detail" style="background-color: #E5004A;border:.0625rem solid #f5f9fc"></textarea>
                           </div>
-                          <button type="button" class="btn btn-block btn-secondary" onclick="send()">发送</button>
+                          <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-block btn-secondary" onclick="send()" style="width:30%;border-radius: 0; color: #E5004A;">发  送</button>
+                          </div>
                       </div>                      
                     </div>
                   </div>
